@@ -135,4 +135,4 @@ My ICP analysis was simple, focusing only on firmographic data, as a proof of co
 
 n8n is clearly a powerful centerpoint for automating and scaling modern marketing operations. This leaves me with an excellent first impression of a platform positioned at the intersection of automation and AI. I’m looking forward to experimenting with some additional workflows to take on more of the product marketing playbook, like identifying use case clusters or supporting segmentation-driven GTM plays.
 
-As a product marketer, what excites me most is how n8n enables not just automation, but repeatable insight generation—unlocking many opportunities for faster GTM cycles, richer segmentation, and smarter decisions at scale.
+As a marketer, what excites me most is how n8n enables not just automation but repeatable insight generation, unlocking many opportunities to speed up and enhance the product marketer’s playbook.
