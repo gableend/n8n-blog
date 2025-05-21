@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownLayout from '../../layouts/MarkdownLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+// Find post by slug
+const post = (await getCollection('blog')).find((entry) => entry.slug === slug);
+
+if (!post) {
+  throw new Error(`❌ No post found for slug: ${slug}`);
+}
+
+// Render the post content
+const rendered = await post.render();
+const { Content } = rendered;
+const { title, date } = post.data;
+---
+
+<MarkdownLayout title={title}>
+  <article>
+    <h1>{title}</h1>
+    <p><em>{date.toDateString()}</em></p>
+    <Content />
+  </article>
+</MarkdownLayout>
